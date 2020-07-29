@@ -7,4 +7,13 @@ The default port is 5678, but this is configurable via the `-listen` flag:
 tcp-echo -listen=:8080 -text="hello world"
 ```
 
-Then run `nc localhost 5678` in your terminal.
+Then run `nc localhost 8080` in your terminal.
+
+## Use with Docker
+
+[Docker image](https://hub.docker.com/r/zianke/tcp-echo)
+
+```
+docker pull zianke/tcp-echo
+docker run -p 8080:8080 zianke/tcp-echo -listen=:8080 -text="hello world"
+```
